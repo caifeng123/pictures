@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    
+    
+    
+    
+    
+    
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="viewport" content="width=device-width, maximum-scale=1.0, user-scalable=0, initial-scale=1.0">
+    <meta content="telephone=no" name="format-detection">
+
+    <title>百度认证平台</title>
+
+    <link rel="icon" href="/ico/favicon.ico" type="image/x-icon"/>
+    <link rel="shortcut icon" href="/ico/favicon.ico" type="image/x-icon"/>
+    <link rel="bookmark" href="/ico/favicon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="/css/base.css?v=2.0">
+    <link rel="stylesheet" href="/css/login.css?v=2.0">
+    <link rel="stylesheet" href="/js/lib/action.min.css?v=2.0">
+</head>
+
+<body>
+
+
+    
+    
+        
+    
+    
+
+
+<div class="wrap">
+
+    <div class="header">
+        <a href="/login">
+            <img class="logo" src="/images/logo.png">
+        </a>
+
+        <div class="more">
+            <img src="/images/more.svg">
+        </div>
+
+        <div class="right">
+            <a href='/login?service=http%3A%2F%2Fwiki.baidu.com%2Fdownload%2Fattachments%2F1385398973%2Fimage2021-3-1_17-1-39.png%3Fversion%3D1%26modificationDate%3D1614589300000%26api%3Dv2&amp;locale=en'>
+                EN
+            </a>
+        </div>
+    </div>
+
+    <div class="h5-nav hide">
+        <div class="container">
+
+            
+                
+                
+                    <a href="/manage/resetpassword">
+                        忘记密码
+                    </a>
+                
+            
+            <a href='/login?service=http%3A%2F%2Fwiki.baidu.com%2Fdownload%2Fattachments%2F1385398973%2Fimage2021-3-1_17-1-39.png%3Fversion%3D1%26modificationDate%3D1614589300000%26api%3Dv2&amp;locale=en'>
+                EN
+            </a>
+            <a href="/manage/help">
+                帮助
+            </a>
+            <s>
+                <i></i>
+            </s>
+        </div>
+    </div>
+
+    <div class="shade">
+        <img src="/images/loginSuccess/wait.gif"/>
+        <p>正在登录...</p>
+    </div>
+
+    <div class="login">
+        <div class="content">
+            <div class="box">
+                <div class="loading"></div>
+                <div class="toast-wrap">
+                    <span class="toast-msg">网络超时,请刷新重试</span>
+                </div>
+                <div class="tooltip">
+                    <div class="tooltip-arrow"></div>
+                    <div class="tooltip-inner">
+                        <div>请保证手机如流版本:</div>
+                        <div>IOS版本在1.0.0以上</div>
+                        <div>Android在1.9.9以上</div>
+                    </div>
+                </div>
+                <div class="nav">
+                    <div class="h5-title">
+                        账号密码登录
+                    </div>
+                    <span class="tab on" data-type="email" id="1">
+                        账号密码登录
+                    </span>
+                    <span class="line">|</span>
+                    <span class="tab" data-type="scan" id="2">
+                        扫码登录
+                    </span>
+                    <span class="line">|</span>
+                    <span class="tab" data-type="token" id="3">
+                        Token登录
+                    </span>
+                </div>
+
+                
+                <form id="form-email" action="/login" method="post">
+                    <div class="email-area">
+                        
+                        
+                        <div class="li list text username">
+                            <input type="text" id="username" data-type="username" name="username" maxlength="90"
+                                   value=''
+                                   placeholder='百度账号'>
+                        </div>
+                        <div class="li list text password">
+                            <input type="password" id="password-email" data-type="password"
+                                   placeholder='账号密码'>
+                        </div>
+                        <div class="li attach">
+                            <span class="checkbox check"></span>
+                            <span>自动登录</span>
+                        </div>
+
+                        <div class="li hint">
+                            <em></em>
+                        </div>
+
+                        <div class="li bt-login commit" id="emailLogin">
+                            <span>登录</span>
+                        </div>
+
+                        <div class="li changeLoginType">
+                            <span class="show-actions">切换登录方式</span>
+                        </div>
+
+                        <div class="li other">
+                        <span class="help">
+                            
+                                
+                                
+                                    <a href="/manage/resetpassword">
+                                        忘记密码
+                                    </a>
+                                
+                            
+                            <a href="/manage/help" target="_blank">
+                                帮助
+                            </a>
+                        </span>
+                        </div>
+                        <input type="hidden" name="password" id="encrypted_password_email" value=''/>
+                        <input type="hidden" name="rememberMe" value="on">
+                        <input type="hidden" name="lt" id="lt-email" value="LT-578660281817600000-Q7Que">
+                        
+                        <input type="hidden" name="execution" value="e2s1">
+                        <input type="hidden" name="_eventId" value="submit">
+                        <input type="hidden" value='1' name="type">
+                    </div>
+                </form>
+
+                
+                <form id="form-token" action="/login" method="post">
+                    <div class="token-area">
+                        
+                        
+                        <div class="li list text username">
+                            <input type="text" id="token" data-type="username" name="username" maxlength="90"
+                                   value=''
+                                   placeholder='百度账号'>
+                        </div>
+                        <div class="li list text password">
+                            <input type="password" id="password-token" data-type="password"
+                                   placeholder='PIN+RSA(RSA Token)动态码'>
+                        </div>
+                        <div class="li attach" style="display: none">
+                            <span class="checkbox"></span>
+                            <span>自动登录</span>
+                        </div>
+
+                        <div class="li hint">
+                            <em></em>
+                        </div>
+
+                        <div class="li bt-login commit" id="tokenLogin">
+                            <span>登录</span>
+                        </div>
+
+                        <div class="li changeLoginType">
+                            
+                                <span class="show-actions">切换登录方式</span>
+                            
+                        </div>
+
+                        <div class="li other">
+                        <span class="help">
+                            <a href="/manage/help" target="_blank">
+                                帮助
+                            </a>
+                        </span>
+                        </div>
+                        <input type="hidden" name="password" id="encrypted_password_token" value=''/>
+                        <input type="hidden" name="rememberMe" value="on">
+                        <input type="hidden" name="lt" id="lt-token" value="LT-578660281817600000-Q7Que">
+                        
+                        <input type="hidden" name="execution" value="e2s1">
+                        <input type="hidden" name="_eventId" value="submit">
+                        <input type="hidden" value='3' name="type">
+                    </div>
+                </form>
+
+                
+                <form id="formQRCode" action="/login" method="post">
+                    <div class="qcode-area">
+                        <div class="qcode" id="qcode">
+                        </div>
+                        <div class="scan-success">
+                        </div>
+                        <div class="li hint">
+                            <em></em>
+                        </div>
+                        <div class="li changeLoginType">
+                            <span class="show-actions">切换登录方式</span>
+                        </div>
+                        <input type="hidden" name="username" maxlength="90" id="qrCodeUsername">
+                        <input type="hidden" name="password" id="qrCodePassword">
+                        <input type="hidden" name="rememberMe" value="on">
+                        <input type="hidden" name="lt" id="lt-qrCode" value="LT-578660281817600000-Q7Que">
+                        
+                        <input type="hidden" name="execution" value="e2s1">
+                        <input type="hidden" name="_eventId" value="submit">
+                        <input type="hidden" value='2' name="type">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+</div>
+
+<script src="/js/lib/flex.min.js?v=2.0"></script>
+<script type="text/javascript" src="/js/lib/jquery3.2.1.min.js"></script>
+<script type="text/javascript" src="/js/lib/jquery.placeholder.min.js"></script>
+<script type="text/javascript" src="/js/jsencrypt.min.js"></script>
+<script type="text/javascript" src="/js/lib/actions.min.js?v=2.0"></script>
+<script type="text/javascript" src="/js/login.js?v=6.0"></script>
+<script type="text/javascript" src="/js/header.js?v=2.0"></script>
+<script type="text/javascript"
+        src="/beep-sdk.js?language=zh&v=1615892962175"></script>
+
+
+<script type="text/javascript">
+    var notnull = '输入不能为空!',
+        sp_noemail = '账号不包括邮箱后缀，如@baidu.com',
+        sp_username = '百度账号',
+        sp_passwd = '账号密码',
+        sp_hardToken = 'PIN+RSA(RSA Token)动态码',
+        usernameformaterror = '账号格式错误!',
+        usernameprompt = '百度账号',
+        lastLoginType = 1,
+        securityLevel = 1,
+        rsaPublicKey = 'MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDSzTSkeLSG1wAOAMRh4L4O78jP4KgSwvMWSnpiWUrOpGknhHMMeoESI94NXdp9DZkptocfuo6dygUOsM+YM60+EVpRg2e9yWApvj88n88+yqQSJeCTRMRS2CDKZrOqf3WOQx7X72Ogj+yTx7mE+Ld+hhrl1ghPxCulQyOnMDSzbwIDAQAB',
+        beepQrCodeToken = '6eef72577bf7820f72f71e6ac90d0461f1450bf99014af3c2cacaef55b461410',
+        mailBoxLoginTabName = '账号密码登录',
+        qrCodeLoginTabName = '扫码登录',
+        mobileHiLoginTabName = '手机如流登录',
+        hardTokenLoginTabName = 'Token登录',
+        cancelButtonName = '取消';
+</script>
+
+</body>
+</html>
